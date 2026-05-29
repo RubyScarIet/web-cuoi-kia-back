@@ -16,6 +16,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.set("trust proxy", 1); // Bắt buộc khi dùng secure: true trên CodeSandbox (HTTPS proxy)
 app.use(session({
   secret: "secretKey",
   resave: false,
