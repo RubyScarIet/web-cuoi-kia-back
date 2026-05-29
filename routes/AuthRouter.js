@@ -46,7 +46,7 @@ router.post("/logout", (req, res) => {
 });
 
 // POST /user
-router.post("/user", async (req, res) => {
+router.post("/", async (req, res) => {
   const { login_name, password, first_name, last_name, location, description, occupation } = req.body;
   if (!login_name || !password || !first_name || !last_name) {
     return res.status(400).json({ error: "login_name, password, first_name, and last_name are required" });
