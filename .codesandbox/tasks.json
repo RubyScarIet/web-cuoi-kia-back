@@ -1,0 +1,30 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install Backend Dependencies",
+      "command": "npm install"
+    },
+    {
+      "name": "Install Frontend Dependencies",
+      "command": "cd client && npm install"
+    },
+    {
+      "name": "Build Frontend",
+      "command": "cd client && npm run build"
+    }
+  ],
+  "tasks": {
+    "start": {
+      "name": "Start Server (Backend + Frontend)",
+      "command": "npm start",
+      "runAtStart": true,
+      "preview": {
+        "port": 8081
+      }
+    },
+    "load-db": {
+      "name": "Load Database (run once)",
+      "command": "npm run load-db"
+    }
+  }
+}
