@@ -19,10 +19,13 @@ cd web-cuoi-kia-back
 npm install
 ```
 
-**Bước 3:** Cấu hình Cơ sở dữ liệu (Database)
-- Đổi tên file `.env.example` thành `.env`
-- Mở file `.env` và điền đường dẫn kết nối MongoDB của bạn vào biến `DB_URL`.
-Ví dụ: `DB_URL=mongodb+srv://nguyentrungtinb23dcvt416_db_user:000569@cuoiki.ofendqh.mongodb.net/photo_sharing?appName=CuoiKi`
+**Bước 3:** Xử lý file cấu hình biến môi trường (.env)
+Dự án yêu cầu một file `.env` ở thư mục gốc để chứa thông tin kết nối Database.
+- Hiện tại, file `.env` đã được tạo sẵn và đi kèm theo code chứa sẵn đường link MongoDB của bạn. Bạn không cần làm gì thêm nếu tiếp tục dùng Database này.
+- Nếu bạn tải về máy chưa có file `.env`, hãy đổi tên file `.env.example` thành `.env` và mở lên.
+- Điền đường dẫn kết nối MongoDB của bạn vào biến `DB_URL`.
+Ví dụ mẫu đã cấu hình:
+`DB_URL=mongodb+srv://nguyentrungtinb23dcvt416_db_user:000569@cuoiki.ofendqh.mongodb.net/photo_sharing?appName=CuoiKi`
 
 **Bước 4:** Nạp dữ liệu mẫu vào DB (Chỉ cần chạy 1 lần duy nhất)
 ```bash
