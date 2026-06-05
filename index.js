@@ -23,8 +23,6 @@ app.use(session({
   saveUninitialized: false,
   cookie: { 
     maxAge: 3600000, // 1 hour
-    sameSite: "none",
-    secure: true
   } 
 }));
 
