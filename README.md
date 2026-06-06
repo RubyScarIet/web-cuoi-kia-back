@@ -42,3 +42,9 @@ npm start
 - Khi import vào CodeSandbox, bạn cần cung cấp thông tin biến môi trường.
 - Đi tới mục **Server Control Panel** -> **Secret** và thêm 1 secret item với Name là `DB_URL` và Value là URL MongoDB của bạn.
 - Sau đó, CodeSandbox sẽ tự động cài gói và chạy `node index.js`.
+
+## Khắc phục lỗi Network Error (Lỗi kết nối MongoDB)
+Nếu bạn chạy Frontend thấy lỗi `Network Error` hoặc màn hình trắng, còn Backend báo lỗi `ECONNREFUSED _mongodb._tcp...`:
+1. **Kiểm tra IP Whitelist:** Đảm bảo địa chỉ IP Internet hiện tại của máy tính bạn đã được thêm vào danh sách cho phép (Network Access) trên trang quản lý MongoDB Atlas.
+2. **Kiểm tra chuỗi kết nối:** Xác nhận lại URL trong file `.env` (tài khoản, mật khẩu, cluster).
+3. **Nạp dữ liệu (Load Data):** Đừng quên chạy lệnh `npm run load-db` để đẩy dữ liệu giả định lên database (chỉ cần chạy 1 lần).
